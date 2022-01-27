@@ -1,0 +1,20 @@
+name: main
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build env
+        conda create -y -p ./env --file requirements.txt
+        conda activate ./env
+
+      - name: run example
+        conda activate ./env
+        python domain_and_clustering_analysis.py config.yml
+
+      - name: pytests
+        conda activate ./env
+        pytest -v tests.py
+
