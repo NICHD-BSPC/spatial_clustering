@@ -19,10 +19,22 @@ Edit the `config.yml` file to reflect your cDNA, variants, and domains of
 interest (see that file for details). Then run:
 
 ```
-python domain_and_clustering_analysis.py config.yml
+python domain_and_clustering_analysis.py config.yml --permutations 1000
 ```
 
-The result will be an annotated report printed to stdout.
-
 The default number of permutations is 1e6, but this can be adjusted with the
-`--permutations` argument.
+`--permutations` argument as in the example above.
+
+The result will be an annotated report printed to stdout, e.g.,
+
+```
+length: 2922
+permutations: 1000
+actual geometric mean pairwise distance: 1.0416633395161507e-05
+distance p-value: 0.3806193806193806
+number of variants per domain:
+{'signal': 0, 'proregion': 1, 'linker1': 1, 'PHM': 4, 'linker2': 3, 'PAL': 7, 'linker3': 0, 'TMD': 0, 'CD': 0}
+p-values per domain:
+{'signal': 0.2647352647352647, 'proregion': 0.01098901098901099, 'linker1': 0.004995004995004995, 'PHM': 0.6153846153846154, 'linker2': 0.19080919080919082, 'PAL': 0.12787212787212787, 'linker3': 0.5224775224775224, 'TMD': 0.32367632367632365, 'CD': 0.7792207792207793}
+```
+
