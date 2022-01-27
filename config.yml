@@ -1,0 +1,34 @@
+# Total length of the cDNA
+length: 2922
+
+# SNV variant locations, 1-based coordinates
+variants:
+  - 79
+  - 92
+  - 145
+  - 239
+  - 718
+  - 731
+  - 1235
+  - 1354
+  - 1473
+  - 1616
+  - 1654
+  - 1688
+  - 1921
+  - 2108
+  - 2276
+  - 2332
+
+# Domains within the cDNA.
+# Each value specifies the 1-based, inclusive, end coordinate of the domain.
+domains:
+  signal: 60
+  proregion: 90
+  linker1: 108
+  PHM: 1053
+  linker2: 1482
+  PAL: 2451
+  linker3: 2589
+  TMD: 2661
+  CD: 2922
