@@ -8,16 +8,19 @@ jobs:
 
       - name: build env
         run: |
+          eval "$(conda shell.bash hook)"
           conda create -y -p ./env --file requirements.txt
           conda activate ./env
 
       - name: run example
         run: |
+          eval "$(conda shell.bash hook)"
           conda activate ./env
           python domain_and_clustering_analysis.py config.yml
 
       - name: pytests
         run: |
+          eval "$(conda shell.bash hook)"
           conda activate ./env
           pytest -v tests.py
 
