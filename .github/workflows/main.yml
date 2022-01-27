@@ -22,5 +22,6 @@ jobs:
         run: |
           eval "$(conda shell.bash hook)"
           conda activate ./env
+          conda install -y pytest
           pytest -v tests.py
 
