@@ -1,5 +1,7 @@
 # Overview
 
+![badge](https://github.com/NICHD-BSPC/spatial_clustering/actions/workflows/main.yml/badge.svg)
+
 Contact: ryan.dale@nih.gov
 
 Given the position of variants and protein domains within a cDNA, this tool
