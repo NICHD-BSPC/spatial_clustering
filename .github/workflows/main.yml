@@ -16,7 +16,7 @@ jobs:
         run: |
           eval "$(conda shell.bash hook)"
           conda activate ./env
-          python domain_and_clustering_analysis.py config.yml
+          python domain_and_clustering_analysis.py config.yml --permutations 1000
 
       - name: pytests
         run: |
