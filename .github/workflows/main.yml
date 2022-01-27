@@ -7,8 +7,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: build env
-        conda create -y -p ./env --file requirements.txt
-        conda activate ./env
+        run: |
+          conda create -y -p ./env --file requirements.txt
+          conda activate ./env
 
       - name: run example
         run: |
