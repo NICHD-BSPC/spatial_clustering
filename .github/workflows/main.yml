@@ -11,10 +11,12 @@ jobs:
         conda activate ./env
 
       - name: run example
-        conda activate ./env
-        python domain_and_clustering_analysis.py config.yml
+        run: |
+          conda activate ./env
+          python domain_and_clustering_analysis.py config.yml
 
       - name: pytests
-        conda activate ./env
-        pytest -v tests.py
+        run: |
+          conda activate ./env
+          pytest -v tests.py
 
